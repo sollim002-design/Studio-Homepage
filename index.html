@@ -10,7 +10,7 @@
     <link rel="preload" as="image" href="assets/studio-control-room.webp" type="image/webp" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Gowun+Batang:wght@700&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <style>
       .hero-poster{background-position:var(--focus,center)}
@@ -38,6 +38,7 @@
         .studio-photo-outboard{grid-column:2;grid-row:3}
       }
       @media(max-width:640px){
+        .hero h1{font-size:48px;line-height:1}
         .studio-gallery{grid-template-columns:1fr;grid-template-rows:330px 330px 230px 230px}
         .studio-photo-main,.studio-photo-booth,.studio-photo-monitoring,.studio-photo-outboard{grid-column:1;grid-row:auto}
         .studio-photo figcaption{left:20px;right:20px;bottom:20px}
