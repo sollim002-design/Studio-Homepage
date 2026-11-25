@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Grey Music Studio — 엔터 믹싱의 기준을 담다. 믹싱, 디렉팅, 레코딩, 오리지널 음원 제작." />
+    <meta name="theme-color" content="#0c0b0a" />
+    <title>Grey Music Studio — Mix · Directing · Recording</title>
+    <link rel="icon" type="image/png" href="assets/grey-music-studio-logo.png" />
+    <link rel="preload" as="image" href="assets/studio-control-room.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .hero-poster{background-position:var(--focus,center)}
+      .studio-gallery{height:640px;grid-template-columns:1.35fr .72fr .72fr;grid-template-rows:1fr 1fr}
+      .studio-photo{background:#0c0b0a}
+      .studio-photo:before{z-index:1;inset:0;border:0;background:linear-gradient(180deg,rgba(12,11,10,.04) 28%,rgba(12,11,10,.86) 100%);pointer-events:none}
+      .studio-photo:after{display:none}
+      .studio-photo-main{grid-column:1;grid-row:1/3}
+      .studio-photo-booth{grid-column:2/4;grid-row:1}
+      .studio-photo-monitoring{grid-column:2;grid-row:2}
+      .studio-photo-outboard{grid-column:3;grid-row:2}
+      .studio-photo img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.8) contrast(1.04) brightness(.83);transition:transform .7s ease,filter .5s ease}
+      .studio-photo-main img{object-position:50% 58%}
+      .studio-photo-booth img{object-position:50% 39%}
+      .studio-photo-monitoring img{object-position:50% 50%}
+      .studio-photo-outboard img{object-position:50% 48%}
+      .studio-photo:hover img{transform:scale(1.035);filter:saturate(.96) contrast(1.04) brightness(.89)}
+      .studio-photo figcaption{position:absolute;z-index:2;left:28px;right:28px;bottom:26px}
+      .studio-photo figcaption small{color:rgba(240,235,227,.68)}
+      @media(max-width:980px){
+        .studio-gallery{height:auto;grid-template-columns:1.2fr .8fr;grid-template-rows:420px 280px 280px}
+        .studio-photo-main{grid-column:1/3;grid-row:1}
+        .studio-photo-booth{grid-column:1;grid-row:2/4}
+        .studio-photo-monitoring{grid-column:2;grid-row:2}
+        .studio-photo-outboard{grid-column:2;grid-row:3}
+      }
+      @media(max-width:640px){
+        .hero h1{font-size:48px;line-height:1}
+        .studio-gallery{grid-template-columns:1fr;grid-template-rows:330px 330px 230px 230px}
+        .studio-photo-main,.studio-photo-booth,.studio-photo-monitoring,.studio-photo-outboard{grid-column:1;grid-row:auto}
+        .studio-photo figcaption{left:20px;right:20px;bottom:20px}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cursor-light" data-cursor-light aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="logo" href="#top" aria-label="Grey Music Studio 홈">
+        <img class="brand-logo" src="assets/grey-music-studio-logo.png" alt="" width="48" height="48" />
+        <span>GREY<span>MUSIC STUDIO</span></span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="#services">Services</a>
+        <a href="#works">Works</a>
+        <a href="#process">Process</a>
+        <a href="#team">Team</a>
+        <a href="#studio">Studio</a>
+        <a href="#schedule">Schedule</a>
+      </nav>
+      <a class="header-contact" href="tel:+821024742797">작업 문의 <span>↗</span></a>
+      <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span></button>
+    </header>
+
+    <main id="top">
+      <section class="hero section-pad">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-copy reveal">
+          <p class="overline"><span>01</span> GREY MUSIC STUDIO</p>
+          <h1>그레이뮤직<br />스튜디오</h1>
+          <p class="hero-script">The standard of entertainment mixing.</p>
+          <p class="hero-description">전직 엔터 프로듀서, 12년차 음악인<br />믹싱 · 디렉팅 · 레코딩 · 레슨</p>
+          <div class="hero-actions">
+            <a class="button gold" href="https://open.kakao.com/o/sJ9qi2jg" target="_blank" rel="noopener">프로젝트 문의하기 <span>↗</span></a>
+            <a class="text-button" href="#works"><i>▶</i> 작업 샘플 듣기</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal" aria-label="Grey Music Studio 작업 샘플">
+          <div class="hero-poster poster-main" style="--thumb:url('assets/studio-control-room.webp');--focus:50% 62%"><span>GREY</span><small>Sound crafted<br />with intention.</small></div>
+          <div class="hero-poster poster-top" style="--thumb:url('assets/studio-recording-booth.webp');--focus:50% 42%"></div>
+          <div class="hero-poster poster-bottom" style="--thumb:url('assets/studio-outboard.webp');--focus:50% 48%"></div>
+          <div class="hero-ring ring-one"></div><div class="hero-ring ring-two"></div>
+          <span class="hero-index">EST. 12 YEARS IN MUSIC</span>
+        </div>
+        <div class="scroll-note"><span></span>SCROLL TO EXPLORE</div>
+      </section>
+
+      <section class="marquee" aria-label="제공 서비스">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span>MIXING</span><i>✦</i><span>VOCAL DIRECTING</span><i>✦</i><span>RECORDING</span><i>✦</i><span>MASTERING</span><i>✦</i><span>ORIGINAL MUSIC</span><i>✦</i>
+          </div>
+          <div class="marquee-group" aria-hidden="true">
+            <span>MIXING</span><i>✦</i><span>VOCAL DIRECTING</span><i>✦</i><span>RECORDING</span><i>✦</i><span>MASTERING</span><i>✦</i><span>ORIGINAL MUSIC</span><i>✦</i>
+          </div>
+        </div>
+      </section>
+
+      <section class="services section-pad" id="services">
+        <div class="section-title reveal"><p class="overline"><span>02</span> SERVICES</p><h2>좋은 목소리가<br /><em>더 선명하게 들리도록.</em></h2></div>
+        <div class="service-grid">
+          <article class="service-card reveal"><span class="service-no">01</span><div class="service-wave"><i></i><i></i><i></i><i></i><i></i></div><h3>커버곡 믹싱</h3><p>에디팅·튠, 인공화음, 2트랙·STEM 믹스, 마스터링까지 곡에 필요한 공정을 선택합니다.</p><button type="button" data-form="cover">신청 양식 보기 <span>→</span></button></article>
+          <article class="service-card reveal"><span class="service-no">02</span><div class="service-icon mic"></div><h3>레코딩 & 디렉팅</h3><p>보컬의 매력이 가장 잘 드러나는 방향을 찾고, 녹음부터 디렉팅까지 함께 완성합니다.</p><button type="button" data-form="recording">신청 양식 보기 <span>→</span></button></article>
+          <article class="service-card reveal"><span class="service-no">03</span><div class="service-icon disc">G</div><h3>오리지널곡 패키지</h3><p>작사·작곡·편곡부터 녹음, 믹싱, 발매와 MV까지 프로젝트에 필요한 팀을 구성합니다.</p><button type="button" data-form="original">신청 양식 보기 <span>→</span></button></article>
+          <article class="service-card reveal"><span class="service-no">04</span><div class="service-icon live"><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>라이브 AR 제작</h3><p>방송, 공연, 행사, 오디션 환경에 맞춰 보컬 구간과 큐를 설계한 라이브 음원을 제작합니다.</p><button type="button" data-form="live">신청 양식 보기 <span>→</span></button></article>
+        </div>
+      </section>
+
+      <section class="works section-pad" id="works">
+        <div class="works-head reveal">
+          <div class="section-title"><p class="overline"><span>03</span> SELECTED WORKS</p><h2>작업 샘플</h2></div>
+          <div class="work-filters" role="tablist" aria-label="포트폴리오 필터"><button type="button" class="active" data-filter="all">ALL</button><button type="button" data-filter="female">FEMALE</button><button type="button" data-filter="male">MALE</button><button type="button" data-filter="duet">DUET</button><button type="button" data-filter="group">GROUP</button></div>
+        </div>
+        <div class="work-grid">
+          <a class="work-card large reveal" data-category="female" href="https://www.youtube.com/watch?v=dYvS7YYkVxo" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/dYvS7YYkVxo/maxresdefault.jpg" alt="여성 솔로곡 믹싱 샘플 썸네일" /><span class="play">▶</span><div><small>FEMALE SOLO · MIXING</small><h3>여성 솔로곡 샘플</h3><span>LISTEN ↗</span></div></a>
+          <a class="work-card reveal" data-category="male" href="https://www.youtube.com/watch?v=yWVhiY212Sw" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/yWVhiY212Sw/hqdefault.jpg" alt="남성 솔로곡 믹싱 샘플 썸네일" /><span class="play">▶</span><div><small>MALE SOLO · MIXING</small><h3>남성 솔로곡 샘플</h3><span>LISTEN ↗</span></div></a>
+          <a class="work-card reveal" data-category="duet" href="https://www.youtube.com/watch?v=UyJaJKskPQo" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/UyJaJKskPQo/hqdefault.jpg" alt="듀엣곡 믹싱 샘플 썸네일" /><span class="play">▶</span><div><small>DUET · MIXING</small><h3>듀엣곡 샘플</h3><span>LISTEN ↗</span></div></a>
+          <a class="work-card wide reveal" data-category="group" href="https://www.youtube.com/watch?v=i9yfErLdqow" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/i9yfErLdqow/maxresdefault.jpg" alt="단체곡 믹싱 샘플 썸네일" /><span class="play">▶</span><div><small>GROUP · MIXING</small><h3>단체곡 샘플</h3><span>LISTEN ↗</span></div></a>
+        </div>
+        <div class="portfolio-links reveal" aria-label="유튜브 포트폴리오 재생목록">
+          <a class="outline-link" href="https://www.youtube.com/watch?v=fnD4locuw7E&amp;list=PLFRXeB5vSYVrxi93hIderp_GELlzIEWUI" target="_blank" rel="noopener noreferrer">Edit / Mix / Mastering 1 <span aria-hidden="true">↗</span></a>
+          <a class="outline-link" href="https://www.youtube.com/watch?v=Qt43JwzzhZ4&amp;list=PLrA63SOUwmbUxQ3z4YfWBzthoCbZxltkQ" target="_blank" rel="noopener noreferrer">Edit / Mix / Mastering 2 <span aria-hidden="true">↗</span></a>
+          <a class="outline-link" href="https://www.youtube.com/watch?v=fnD4locuw7E&amp;list=PLFRXeB5vSYVpNu54Hqlizlagvrrj6UJ_N" target="_blank" rel="noopener noreferrer">Directing / Recording <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="process section-pad" id="process">
+        <div class="section-title reveal"><p class="overline"><span>04</span> PROCESS</p><h2>문의부터 최종본까지</h2><p>신청하신 공정의 완성본과 크레딧 안내를 함께 전달합니다.</p></div>
+        <ol class="process-list">
+          <li class="reveal"><span>01</span><div><strong>문의 · 상담</strong><p>용도, 일정, 원하는 방향과 필요한 공정을 확인합니다.</p></div></li>
+          <li class="reveal"><span>02</span><div><strong>자료 전달 · 결제</strong><p>신청 양식과 녹음본을 확인한 뒤 일정을 확정합니다.</p></div></li>
+          <li class="reveal"><span>03</span><div><strong>작업 진행</strong><p>상담한 방향에 맞춰 에디팅, 믹싱 등 공정을 진행합니다.</p></div></li>
+          <li class="reveal"><span>04</span><div><strong>피드백</strong><p>1차본 전달 후 총 3회까지 구체적인 피드백을 반영합니다.</p></div></li>
+          <li class="reveal"><span>05</span><div><strong>최종본 전달</strong><p>48kHz / 24bit / Mono WAV 형식과 크레딧을 전달합니다.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="team section-pad" id="team">
+        <div class="team-intro reveal"><p class="overline"><span>05</span> THE TEAM</p><h2>각자의 전문성으로<br /><em>하나의 사운드를 만듭니다.</em></h2><p>GreyMusicStudio · KIYOLiVE 내부 제작진이 프로젝트의 구성과 필요한 전문 분야에 따라 참여합니다.</p></div>
+        <div class="team-list">
+          <article class="team-member reveal"><span>FOUNDER · LEAD MIX ENGINEER</span><strong>GreyKim</strong><p>Grey Music Studio 대표 · 리드 믹스 엔지니어 · 프로젝트 총괄</p><i>01</i></article>
+          <article class="team-member reveal"><span>MIX ENGINEER · VOCAL DIRECTOR</span><strong>이루시온</strong><p>KIYOLiVE 대표 · 믹스 엔지니어 · 보컬 디렉팅</p><i>02</i></article>
+          <article class="team-member reveal"><span>PRODUCER</span><strong>$온니</strong><p>작곡 · 편곡</p><i>03</i></article>
+          <article class="team-member reveal"><span>PROJECT MANAGER</span><strong>Mr.SolLim</strong><p>프로젝트 매니저</p><i>04</i></article>
+        </div>
+      </section>
+
+      <section class="studio section-pad" id="studio">
+        <div class="studio-heading reveal">
+          <div><p class="overline"><span>06</span> THE STUDIO</p><h2>좋은 사운드는<br /><em>좋은 환경에서 시작됩니다.</em></h2></div>
+          <p>Grey Music Studio의 작업 공간과 실제 제작에 사용하는 장비, 플러그인을 소개합니다.</p>
+        </div>
+        <div class="studio-gallery reveal">
+          <figure class="studio-photo studio-photo-main">
+            <img src="assets/studio-control-room.webp" alt="Grey Music Studio 컨트롤룸 전경" width="1800" height="1286" loading="lazy" decoding="async" />
+            <figcaption><span>STUDIO VIEW 01</span><strong>Control room</strong><small>믹싱과 디렉팅을 위한 메인 컨트롤룸</small></figcaption>
+          </figure>
+          <figure class="studio-photo studio-photo-booth">
+            <img src="assets/studio-recording-booth.webp" alt="Neumann U 87 Ai 마이크가 설치된 녹음 부스" width="1200" height="1600" loading="lazy" decoding="async" />
+            <figcaption><span>STUDIO VIEW 02</span><strong>Recording booth</strong><small>보컬 레코딩과 디렉팅을 위한 독립 공간</small></figcaption>
+          </figure>
+          <figure class="studio-photo studio-photo-monitoring">
+            <img src="assets/studio-monitoring.webp" alt="컴프레서와 오디오 인터페이스가 구성된 아날로그 랙" width="1200" height="900" loading="lazy" decoding="async" />
+            <figcaption><span>STUDIO VIEW 03</span><strong>Analog rack</strong><small>컴프레서와 인터페이스로 구성한 아날로그 체인</small></figcaption>
+          </figure>
+          <figure class="studio-photo studio-photo-outboard">
+            <img src="assets/studio-outboard.webp" alt="Universal Audio와 Focusrite 마이크 프리앰프" width="1200" height="900" loading="lazy" decoding="async" />
+            <figcaption><span>STUDIO VIEW 04</span><strong>Mic preamps</strong><small>UA 4-710d · LA-610 MkII · Focusrite OctoPre MkII</small></figcaption>
+          </figure>
+        </div>
+        <div class="studio-inventory">
+          <article class="inventory-card reveal">
+            <div class="inventory-title"><span>01</span><h3>Studio Setup</h3><p>RECORDING · MONITORING · OUTBOARD</p></div>
+            <ul>
+              <li><span>Computer</span><strong>Mac Studio</strong></li>
+              <li><span>Main DAW</span><strong>Pro Tools</strong></li>
+              <li><span>Interface</span><strong>Antelope Audio Orion Studio</strong></li>
+              <li><span>Monitors</span><strong>Yamaha NS-10M · HEDD Type 20</strong></li>
+              <li><span>Cue System</span><strong>Behringer POWERPLAY P16</strong></li>
+              <li><span>Microphones</span><strong>Neumann U 87 Ai · AKG C414 · Warm Audio WA-47 · Universal Audio Sphere LX</strong></li>
+              <li><span>Mic Preamps</span><strong>Universal Audio 4-710d · LA-610 MkII · Focusrite OctoPre MkII</strong></li>
+              <li><span>Outboard</span><strong>Warm Audio WA-2A · WA76 · BSS DPR-404 · UREI 7110</strong></li>
+            </ul>
+          </article>
+          <article class="inventory-card reveal">
+            <div class="inventory-title"><span>02</span><h3>Plug-ins</h3><p>MIXING · MASTERING · EDITING</p></div>
+            <ul>
+              <li><span>Plug-ins</span><strong>UAD · Waves · Plugin Alliance · iZotope · Slate Digital · Sonnox · FabFilter · Synchro Arts · SSL · Gullfoss · McDSP · Soundtoys · Antares Auto-Tune Pro · Celemony Melodyne · Acustica Audio</strong></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="details section-pad">
+        <div class="detail-block reveal"><p class="overline"><span>07</span> FILE GUIDE</p><h2>보내주실 파일</h2><ul><li><strong>INST & 원곡</strong><span>Stereo · MP3 또는 WAV</span></li><li><strong>녹음본</strong><span>Mono · 48kHz · 24bit · WAV</span></li><li><strong>압축</strong><span>모든 파일을 INST에 맞춰 정리한 뒤 하나의 ZIP으로 전달</span></li></ul></div>
+        <div class="detail-block reveal"><p class="overline"><span>08</span> BEFORE ORDER</p><h2>참고사항</h2><div class="faq"><article><button type="button" aria-expanded="false">저작권과 작업 자산 <span>+</span></button><div><p>프로젝트 파일, EQ 세팅, 플러그인 캡처 등 작업 노하우에 해당하는 자료와 화음 파트의 분리 제공은 어렵습니다. 화음 확인이 필요할 경우 구간 캡처 또는 볼륨을 높인 확인용 파일로 안내할 수 있습니다.</p></div></article><article><button type="button" aria-expanded="false">주문 전 유의사항 <span>+</span></button><div><p>선 문의 후 결제해 주세요. 작업물은 포트폴리오로 활용될 수 있으며 최종 안내되는 크레딧을 반드시 기재해 주세요. 녹음본 상태에 따라 추가금이 발생하거나 작업이 어려울 수 있습니다.</p></div></article></div></div>
+      </section>
+
+      <section class="schedule section-pad" id="schedule">
+        <div class="section-title reveal"><p class="overline"><span>09</span> AVAILABILITY</p><h2>작업 가능 일정</h2><p>일정을 확인하신 뒤, 정확한 마감 가능 여부는 문의를 통해 확인해 주세요.</p></div>
+        <div class="calendar-wrap reveal"><iframe src="https://calendar.google.com/calendar/embed?src=selepina1223%40gmail.com&amp;ctz=Asia%2FSeoul&amp;mode=MONTH&amp;wkst=1&amp;bgcolor=%23EBEDEF&amp;showTitle=0&amp;showPrint=0&amp;showTz=0&amp;showTabs=0&amp;showCalendars=0" title="Grey Music Studio 작업 가능 일정" loading="lazy"></iframe></div>
+      </section>
+
+      <section class="contact section-pad">
+        <p class="overline reveal"><span>10</span> START A PROJECT</p>
+        <div class="contact-inner reveal">
+          <h2>당신의 목소리가<br /><em>가장 잘 들리는 순간.</em></h2>
+          <div class="contact-methods">
+            <a class="contact-card primary" href="https://open.kakao.com/o/sJ9qi2jg" target="_blank" rel="noopener"><small>KAKAO OPEN CHAT</small><span>카카오톡으로 문의</span><i>↗</i></a>
+            <a class="contact-card" href="https://discord.com/users/342338919012237323" target="_blank" rel="noopener noreferrer"><small>DISCORD</small><span>디스코드로 문의</span><i>↗</i></a>
+            <a class="contact-card" href="tel:+821024742797"><small>PHONE</small><span>010 2474 2797</span><i>↗</i></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer><a class="logo" href="#top"><img class="brand-logo" src="assets/grey-music-studio-logo.png" alt="" width="48" height="48" /><span>GREY<span>MUSIC STUDIO</span></span></a><p>© 2026 GREY MUSIC STUDIO. ALL RIGHTS RESERVED.</p><a href="#top">BACK TO TOP ↑</a></footer>
+
+    <dialog class="form-dialog" id="form-dialog">
+      <button class="dialog-close" type="button" aria-label="닫기">×</button>
+      <p class="overline">APPLICATION FORM</p><h2 id="form-title"></h2><p class="dialog-lead" id="form-guide">아래 항목을 직접 작성한 뒤, 작성 내용을 복사해 문의 시 함께 보내주세요.</p>
+      <form class="application-form" id="application-form" aria-describedby="form-guide" autocomplete="on"><div id="form-content"></div></form>
+      <div class="dialog-actions"><button type="button" id="copy-form">작성 내용 복사하기</button><a href="https://open.kakao.com/o/sJ9qi2jg" target="_blank" rel="noopener">카카오톡 문의 ↗</a><a class="discord-dialog-button" href="https://discord.com/users/342338919012237323" target="_blank" rel="noopener noreferrer">디스코드로 문의 <i>↗</i></a></div>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
