@@ -353,16 +353,3 @@ if (cursorLight && canUseCursorLight) {
   }, { passive: true });
   document.documentElement.addEventListener('mouseleave', () => cursorLight.classList.remove('active'));
 }
-
-document.querySelectorAll('[data-copy-discord]').forEach(button => {
-  button.addEventListener('click', async () => {
-    const label = button.querySelector('[data-copy-label]');
-    try {
-      await copyTextToClipboard('back_forest');
-      if (label) label.textContent = '완료 ✓';
-      window.setTimeout(() => { if (label) label.textContent = '복사'; }, 1800);
-    } catch {
-      window.prompt('디스코드 아이디를 복사해 주세요.', 'back_forest');
-    }
-  });
-});
