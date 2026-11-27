@@ -60,7 +60,7 @@
         <a href="#studio">Studio</a>
         <a href="#schedule">Schedule</a>
       </nav>
-      <a class="header-contact" href="tel:+821024742797">작업 문의 <span>↗</span></a>
+      <button class="header-contact" type="button" data-contact-open aria-haspopup="dialog" aria-controls="contact-dialog">작업 문의 <span>↗</span></button>
       <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span></button>
     </header>
 
@@ -73,7 +73,7 @@
           <p class="hero-script">The standard of entertainment mixing.</p>
           <p class="hero-description">전직 엔터 프로듀서, 12년차 음악인<br />믹싱 · 디렉팅 · 레코딩 · 레슨</p>
           <div class="hero-actions">
-            <a class="button gold" href="https://open.kakao.com/o/sJ9qi2jg" target="_blank" rel="noopener">프로젝트 문의하기 <span>↗</span></a>
+            <button class="button gold" type="button" data-contact-open aria-haspopup="dialog" aria-controls="contact-dialog">프로젝트 문의하기 <span>↗</span></button>
             <a class="text-button" href="#works"><i>▶</i> 작업 샘플 듣기</a>
           </div>
         </div>
@@ -101,10 +101,16 @@
       <section class="services section-pad" id="services">
         <div class="section-title reveal"><p class="overline"><span>02</span> SERVICES</p><h2>좋은 목소리가<br /><em>더 선명하게 들리도록.</em></h2></div>
         <div class="service-grid">
-          <article class="service-card reveal"><span class="service-no">01</span><div class="service-wave"><i></i><i></i><i></i><i></i><i></i></div><h3>커버곡 믹싱</h3><p>에디팅·튠, 인공화음, 2트랙·STEM 믹스, 마스터링까지 곡에 필요한 공정을 선택합니다.</p><button type="button" data-form="cover">신청 양식 보기 <span>→</span></button></article>
-          <article class="service-card reveal"><span class="service-no">02</span><div class="service-icon mic"></div><h3>레코딩 & 디렉팅</h3><p>보컬의 매력이 가장 잘 드러나는 방향을 찾고, 녹음부터 디렉팅까지 함께 완성합니다.</p><button type="button" data-form="recording">신청 양식 보기 <span>→</span></button></article>
-          <article class="service-card reveal"><span class="service-no">03</span><div class="service-icon disc">G</div><h3>오리지널곡 패키지</h3><p>작사·작곡·편곡부터 녹음, 믹싱, 발매와 MV까지 프로젝트에 필요한 팀을 구성합니다.</p><button type="button" data-form="original">신청 양식 보기 <span>→</span></button></article>
-          <article class="service-card reveal"><span class="service-no">04</span><div class="service-icon live"><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>라이브 AR 제작</h3><p>방송, 공연, 행사, 오디션 환경에 맞춰 보컬 구간과 큐를 설계한 라이브 음원을 제작합니다.</p><button type="button" data-form="live">신청 양식 보기 <span>→</span></button></article>
+          <article class="service-card reveal"><span class="service-no">01</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 80 80" width="80" height="80" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 32v16m11-25v34m11-45v56m12-40v24m11-32v40m11-26v12"/></svg></div><h3>커버곡 믹싱</h3><p>에디팅·튠, 인공화음, 2트랙·STEM 믹스, 마스터링까지 곡에 필요한 공정을 선택합니다.</p></article>
+          <article class="service-card reveal"><span class="service-no">02</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 80 80" width="80" height="80" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="27" y="8" width="26" height="42" rx="13"/><path d="M16 36v3a24 24 0 0 0 48 0v-3M40 63v9M28 72h24"/></svg></div><h3>레코딩 & 디렉팅</h3><p>보컬의 매력이 가장 잘 드러나는 방향을 찾고, 녹음부터 디렉팅까지 함께 완성합니다.</p></article>
+          <article class="service-card reveal"><span class="service-no">03</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 80 80" width="80" height="80" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="40" cy="40" r="32"/><text x="40" y="42" dy=".32em" text-anchor="middle" fill="currentColor" stroke="none" font-family="Georgia,serif" font-size="36">G</text></svg></div><h3>오리지널곡 패키지</h3><p>작사·작곡·편곡부터 녹음, 믹싱, 발매와 MV까지 프로젝트에 필요한 팀을 구성합니다.</p></article>
+          <article class="service-card reveal"><span class="service-no">04</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 80 80" width="80" height="80" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 31v18m12-30v42m12-53v64m12-58v52m12-43v34m12-23v12"/></svg></div><h3>라이브 AR 제작</h3><p>방송, 공연, 행사, 오디션 환경에 맞춰 보컬 구간과 큐를 설계한 라이브 음원을 제작합니다.</p></article>
+          <article class="service-card reveal"><span class="service-no">05</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 80 80" width="80" height="80" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M28 62V20l40-9v42M28 29l40-9"/><ellipse cx="18" cy="62" rx="10" ry="8"/><ellipse cx="58" cy="53" rx="10" ry="8"/></svg></div><h3>작·편곡</h3><p>곡의 분위기와 레퍼런스를 바탕으로 작곡·편곡을 진행하고, 필요한 제작 범위를 함께 정합니다.</p></article>
+          <article class="service-card reveal"><span class="service-no">06</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 80 80" width="80" height="80" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M40 18c-10-7-21-8-32-4v48c11-4 22-3 32 5 10-8 21-9 32-5V14c-11-4-22-3-32 4Zm0 0v49M17 28c5 0 10 1 14 4m18 0c4-3 9-4 14-4M17 41c5 0 10 1 14 4m18 0c4-3 9-4 14-4"/></svg></div><h3>레슨</h3><p>목표와 현재 수준에 맞춰 보컬·믹싱 레슨을 진행하며, 필요한 내용과 일정을 함께 정합니다.</p></article>
+        </div>
+        <div class="application-entry reveal">
+          <p>원하시는 서비스를 선택하고 신청 양식을 작성해 주세요.</p>
+          <a class="button gold" href="apply.html">신청양식 페이지 들어가기</a>
         </div>
       </section>
 
@@ -218,11 +224,18 @@
 
     <footer><a class="logo" href="#top"><img class="brand-logo" src="assets/grey-music-studio-logo.png" alt="" width="48" height="48" /><span>GREY<span>MUSIC STUDIO</span></span></a><p>© 2026 GREY MUSIC STUDIO. ALL RIGHTS RESERVED.</p><a href="#top">BACK TO TOP ↑</a></footer>
 
-    <dialog class="form-dialog" id="form-dialog">
-      <button class="dialog-close" type="button" aria-label="닫기">×</button>
-      <p class="overline">APPLICATION FORM</p><h2 id="form-title"></h2><p class="dialog-lead" id="form-guide">아래 항목을 직접 작성한 뒤, 작성 내용을 복사해 문의 시 함께 보내주세요.</p>
-      <form class="application-form" id="application-form" aria-describedby="form-guide" autocomplete="on"><div id="form-content"></div></form>
-      <div class="dialog-actions"><button type="button" id="copy-form">작성 내용 복사하기</button><a href="https://open.kakao.com/o/sJ9qi2jg" target="_blank" rel="noopener">카카오톡 문의 ↗</a><a class="discord-dialog-button" href="https://discord.com/users/342338919012237323" target="_blank" rel="noopener noreferrer">디스코드로 문의 <i>↗</i></a></div>
+    <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-dialog-title" aria-describedby="contact-dialog-description">
+      <div class="contact-dialog-inner">
+        <button class="contact-dialog-close" type="button" aria-label="문의창 닫기" autofocus>×</button>
+        <p class="overline">CONTACT</p>
+        <h2 id="contact-dialog-title">편하신 방법으로 문의해 주세요</h2>
+        <p id="contact-dialog-description">프로젝트와 일정에 대해 상담해 드립니다.</p>
+        <div class="contact-dialog-options">
+          <a class="contact-dialog-option" href="tel:+821024742797"><small>PHONE</small><strong>전화하기</strong><span>010-2474-2797</span></a>
+          <a class="contact-dialog-option" href="https://open.kakao.com/o/sJ9qi2jg" target="_blank" rel="noopener noreferrer"><small>KAKAO OPEN CHAT</small><strong>카카오톡</strong><span>오픈채팅으로 문의</span></a>
+          <a class="contact-dialog-option" href="https://discord.com/users/342338919012237323" target="_blank" rel="noopener noreferrer"><small>DISCORD</small><strong>디스코드</strong><span>디스코드로 문의</span></a>
+        </div>
+      </div>
     </dialog>
     <script src="script.js"></script>
   </body>

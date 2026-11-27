@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Grey Music Studio 오리지널곡 패키지 신청 양식. 작업 내용을 작성하고 복사해 문의해 주세요." />
+    <meta name="theme-color" content="#0c0b0a" />
+    <title>오리지널곡 패키지 신청 양식 — Grey Music Studio</title>
+    <link rel="icon" type="image/png" href="assets/grey-music-studio-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&amp;family=Syne:wght@500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="application.css" />
+  </head>
+  <body class="application-page" data-application="original">
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Grey Music Studio 홈">
+        <img class="brand-logo" src="assets/grey-music-studio-logo.png" alt="" width="48" height="48" />
+        <span>GREY<span>MUSIC STUDIO</span></span>
+      </a>
+      <a class="application-back" href="apply.html">신청 서비스 다시 선택하기</a>
+    </header>
+    <main class="application-main" id="top">
+      <div class="application-intro">
+        <p class="overline">GREY MUSIC STUDIO · APPLICATION</p>
+        <h1 id="form-title">오리지널곡 패키지 신청 양식</h1>
+        <p id="form-guide">아래 항목을 작성한 뒤, 작성 내용을 복사해 문의 시 함께 보내주세요.<br />작성만으로 신청이 접수되지는 않습니다.</p>
+      </div>
+      <noscript><p>신청 양식을 작성하려면 브라우저에서 JavaScript를 허용해 주세요. 카카오톡 또는 디스코드로 직접 문의하셔도 됩니다.</p></noscript>
+      <form class="application-form" id="application-form" aria-describedby="form-guide" autocomplete="on"><div id="form-content"></div></form>
+      <section class="application-finish" aria-label="작성 내용 전달">
+        <h2>작성 내용을 보내주세요</h2>
+        <p>내용을 복사한 후, 편하신 문의 채널에 붙여넣어 주세요.</p>
+        <div class="application-actions">
+          <button type="button" id="copy-form">작성 내용 복사하기</button>
+          <a href="https://open.kakao.com/o/sJ9qi2jg" target="_blank" rel="noopener noreferrer">카카오톡 문의</a>
+          <a href="https://discord.com/users/342338919012237323" target="_blank" rel="noopener noreferrer">디스코드로 문의</a>
+        </div>
+        <p id="copy-status" role="status" aria-live="polite"></p>
+      </section>
+      <a class="application-back bottom-back" href="apply.html">신청 서비스 다시 선택하기</a>
+    </main>
+    <script src="application.js"></script>
+  </body>
+</html>

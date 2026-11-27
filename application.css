@@ -1,0 +1,51 @@
+/* Dedicated application pages share the main site's palette and form controls. */
+.application-main{width:min(960px,100%);margin:0 auto;padding:150px 32px 64px}
+.application-back{font-size:14px;color:var(--gold);line-height:1.6}
+.application-back:hover{text-decoration:underline;text-underline-offset:5px}
+.application-intro{margin-bottom:52px}
+.application-intro .overline{font-size:12px;line-height:1.7}
+.application-intro h1{font-size:clamp(28px,4vw,44px);font-weight:600;letter-spacing:-.045em;line-height:1.4;margin:0 0 20px;word-break:keep-all}
+.application-intro>p:last-child,.application-finish>p{color:var(--muted);font-size:16px;line-height:1.8}
+.application-form{margin-top:0}
+.application-section{padding:36px 0;margin-bottom:12px}
+.application-section legend{font-size:20px}
+.application-fields{gap:24px}
+.application-label,.application-choice span,.application-note{font-size:14px}
+.application-control{font-size:16px;min-height:52px;padding:14px 16px}
+.application-control::placeholder{color:#91877b}
+.application-choice span{padding:12px 16px}
+textarea.application-control{min-height:136px}
+.application-finish{margin-top:40px;padding:32px;background:var(--elev);border:1px solid var(--line)}
+.application-finish h2{font-size:22px;margin:0 0 12px}
+.application-finish>p{margin:0 0 24px}
+.application-actions{display:flex;flex-wrap:wrap;gap:12px}
+.application-actions>*{flex:1;display:flex;align-items:center;justify-content:center;min-height:52px;padding:14px 16px;border:1px solid var(--gold);background:transparent;color:var(--gold);font-size:14px;text-align:center;cursor:pointer}
+.application-actions button{flex:1.3;background:var(--gold);color:var(--bg);font-weight:600}
+.application-actions>*:hover{filter:brightness(1.15)}
+.application-page :focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.application-finish #copy-status{font-size:14px;margin:16px 0 0}
+#copy-status:empty{display:none}
+.bottom-back{display:inline-block;margin-top:28px}
+@media(max-width:640px){
+  .application-page .site-header{padding:0 20px;gap:16px}
+  .application-page .site-header .application-back{font-size:12px;max-width:104px;text-align:right;word-break:keep-all}
+  .application-main{padding:112px 24px 48px}
+  .application-intro{margin-bottom:36px}
+  .application-section legend{font-size:18px}
+  .application-finish{padding:24px 20px}
+  .application-actions{flex-direction:column}
+}
+
+/* Service selection before opening a form. */
+.application-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.application-option{display:flex;flex-direction:column;padding:32px;border:1px solid var(--line);background:var(--elev);transition:border-color .2s,background .2s}
+.application-option:hover{border-color:var(--gold);background:var(--card)}
+.application-option h2{font-size:24px;line-height:1.4;letter-spacing:-.035em;margin:0 0 16px;word-break:keep-all}
+.application-option p{font-size:16px;line-height:1.8;color:var(--muted);margin:0 0 28px;word-break:keep-all}
+.application-option-action{margin-top:auto;padding-top:20px;border-top:1px solid var(--line);color:var(--gold);font-size:14px;font-weight:500}
+@media(max-width:640px){.application-options{grid-template-columns:1fr;gap:16px}.application-option{padding:26px}.application-option h2{font-size:22px}}
+
+.application-selection .application-main{width:min(1160px,100%)}
+.application-options{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:980px){.application-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.application-options{grid-template-columns:1fr}}
